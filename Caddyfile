@@ -5,7 +5,8 @@
 	auto_https off # railway handles https for us, this could in some cases cause issues if left enabled
 	# runtime logs
 	log {
-		format console # set runtime log format to console mode 
+		output discard
+		# format console # set runtime log format to console mode 
 	}
 	servers {
 		trusted_proxies static private_ranges # trust railway's proxy
@@ -14,7 +15,7 @@
 
 # site block, listens on the $PORT environment variable, automatically assigned by railway
 :{$PORT} {
-	reverse_proxy /* http://127.0.0.1:{$ODOO_PORT_NUMBER} {
+	reverse_proxy /* http://127.0.0.1:{$ODOO_PORT} {
 		header_down Upgrade-Insecure-Requests "1"
 		header_down Content-Security-Policy "upgrade-insecure-requests"
 	}
