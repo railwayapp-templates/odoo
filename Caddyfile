@@ -15,7 +15,7 @@
 
 # site block, listens on the $PORT environment variable, automatically assigned by railway
 :{$PORT} {
-	reverse_proxy /* http://127.0.0.1:{$ODOO_PORT} {
+	reverse_proxy /* http://127.0.0.1:8069 {
 		header_down Upgrade-Insecure-Requests "1"
 		header_down Content-Security-Policy "upgrade-insecure-requests"
 	}

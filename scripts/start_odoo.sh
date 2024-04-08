@@ -3,7 +3,7 @@
 set -e
 
 exec odoo \
-    --http-port=${ODOO_PORT} \
+    --http-port="8069" \
     --init=all \
     --without-demo=True \
     --proxy-mode \
