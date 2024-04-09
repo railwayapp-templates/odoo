@@ -31,7 +31,7 @@ COPY --from=parallel /usr/bin/parallel /usr/bin/parallel
 
 COPY --from=netcat /usr/bin/nc /usr/bin/nc
 
-COPY --chmod=755 /scripts/start.sh /scripts/start_odoo.sh /scripts/start_caddy.sh ./
+COPY --chmod=755 /scripts/* ./
 
 ENTRYPOINT ["/bin/sh"]
 
