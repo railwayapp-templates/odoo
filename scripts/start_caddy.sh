@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -e
-
 exec caddy run \
     --config Caddyfile \
-    --adapter caddyfile
+    --adapter caddyfile 2>&1
