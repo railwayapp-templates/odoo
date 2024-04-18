@@ -10,5 +10,6 @@ echo Database is now available
 
 parallel --ungroup --halt now,done=1 ::: \
     "exec ./start_odoo.sh" \
-    "exec ./start_caddy.sh"; \
-    false
+    "exec ./start_caddy.sh"
+
+false
